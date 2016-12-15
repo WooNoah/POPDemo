@@ -7,8 +7,13 @@
 //
 
 #import "Wrong_Pwd_AnimViewController.h"
+#import <pop/POP.h>
 
 @interface Wrong_Pwd_AnimViewController ()
+
+@property (strong, nonatomic) IBOutlet UITextField *testTextfield;
+
+@property (strong, nonatomic) IBOutlet UIButton *testButton;
 
 @end
 
@@ -17,6 +22,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    self.title = @"Wrong Password";
+}
+
+
+- (IBAction)buttonClick:(id)sender {
+    POPSpringAnimation *shake = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleX];
+    
+    shake.springBounciness = 14;
+    shake.velocity = @(30);
+    
+    [self.testTextfield.layer pop_addAnimation:shake forKey:@"shakeAnimationX"];
+    
+    POPSpringAnimation *shakeY = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleY];
+    shakeY.velocity = @(10);
+    [self.testTextfield.layer pop_addAnimation:shakeY forKey:@"shakeAnimationY"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
