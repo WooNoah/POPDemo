@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Button_AnimViewController">
+            <connections>
+                <outlet property="commitBtn" destination="gQK-UJ-4Jp" id="Fav-K7-CKT"/>
+                <outlet property="likeBtn" destination="ovD-Ec-DIR" id="0ZZ-BN-ew7"/>
+                <outlet property="textfield" destination="UNc-X9-QHy" id="glc-b8-bMT"/>
+                <outlet property="view" destination="iN0-l3-epB" id="iOi-nA-Ds5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNc-X9-QHy">
+                    <rect key="frame" x="40" y="174" width="295" height="44"/>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="1eo-W5-hdx"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQK-UJ-4Jp">
+                    <rect key="frame" x="271" y="226" width="64" height="34"/>
+                    <state key="normal" title="Commit">
+                        <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovD-Ec-DIR">
+                    <rect key="frame" x="301" y="226" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="5T1-MA-TC1"/>
+                        <constraint firstAttribute="width" constant="34" id="Xqp-L2-Gfu"/>
+                        <constraint firstAttribute="width" secondItem="ovD-Ec-DIR" secondAttribute="height" multiplier="1:1" id="aCU-Sq-8Hy"/>
+                    </constraints>
+                    <state key="normal" image="like"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="UNc-X9-QHy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="3MG-Gl-fDQ"/>
+                <constraint firstItem="UNc-X9-QHy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="174" id="8yE-7R-4tp"/>
+                <constraint firstItem="ovD-Ec-DIR" firstAttribute="trailing" secondItem="UNc-X9-QHy" secondAttribute="trailing" id="D5M-0v-z7N"/>
+                <constraint firstItem="gQK-UJ-4Jp" firstAttribute="trailing" secondItem="UNc-X9-QHy" secondAttribute="trailing" id="EIO-1H-Ldm"/>
+                <constraint firstItem="UNc-X9-QHy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IJB-us-ncB"/>
+                <constraint firstItem="ovD-Ec-DIR" firstAttribute="height" secondItem="gQK-UJ-4Jp" secondAttribute="height" id="MQM-qU-d0Q"/>
+                <constraint firstItem="ovD-Ec-DIR" firstAttribute="top" secondItem="UNc-X9-QHy" secondAttribute="bottom" constant="8" id="f9u-Ob-7dk"/>
+                <constraint firstItem="gQK-UJ-4Jp" firstAttribute="top" secondItem="UNc-X9-QHy" secondAttribute="bottom" constant="8" id="tuu-mO-5wZ"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="like" width="723" height="709"/>
+    </resources>
+</document>

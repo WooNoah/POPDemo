@@ -1,0 +1,6 @@
+platform:ios, '7.0'
+
+target 'POPDemo' do
+	pod 'pop', :git => 'https://github.com/facebook/pop.git'
+	pod 'Masonry'
+end
