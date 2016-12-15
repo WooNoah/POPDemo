@@ -58,7 +58,7 @@
     return YES;
 }
 
-
+#pragma mark - Private Methods
 -(void)showLikeButton {
     if (self.likeBtn.isHidden) {
         self.likeBtn.hidden = NO;
@@ -86,7 +86,6 @@
         
         sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointZero];
         
-//        sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(8, 8)];
         sprintAnimation.springBounciness = 20;
         [self.commitBtn pop_addAnimation:sprintAnimation forKey:@"showNormalButton"];
     }
